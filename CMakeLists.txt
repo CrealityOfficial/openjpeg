@@ -53,3 +53,7 @@ __add_real_target(LibJPEG lib SOURCE ${JPEG_SRCS}
 							  INC ${INCS}
 							  INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 							  ) 
+							  
+if(CC_INSTALL_OPENJPEG)
+	__install_directory_specif(${CMAKE_CURRENT_SOURCE_DIR}/LibJPEG LibJPEG)
+endif()
