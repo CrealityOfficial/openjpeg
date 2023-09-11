@@ -48,12 +48,12 @@ file(GLOB JPEG_SRCS LibJPEG/jaricom.c
 					)
 
 set(INCS ${CMAKE_CURRENT_SOURCE_DIR}/LibJPEG)
-__add_real_target(LibJPEG lib SOURCE ${JPEG_SRCS}
+__add_real_target(open_jpeg lib SOURCE ${JPEG_SRCS}
 							  DEF _CRT_SECURE_NO_DEPRECATE
 							  INC ${INCS}
 							  INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 							  ) 
 							  
-if(CC_INSTALL_OPENJPEG)
-	__install_directory_specif(${CMAKE_CURRENT_SOURCE_DIR}/ LibJPEG)
+if(CC_INSTALL_OPEN_JPEG)
+	__install_directory_specif(${CMAKE_CURRENT_SOURCE_DIR}/ open_jpeg)
 endif()
